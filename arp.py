@@ -11,7 +11,7 @@ def GetNetwork():
     out = pattern.split()
     network = out[20]
     iface = out[27]
-    GateWay = out[11]
+    GateWay = out[13]
     return network,iface,GateWay
 
 def MakeCommand():
@@ -37,7 +37,7 @@ def Attack():
     Net_info = GetNetwork()
     Iface = Net_info[1]
     GateWay = Net_info[2]
-    IP_Pool = MakeCommand()
+    IP_Pool = Read_File("433wifi.txt")
     a=0
     for ip in IP_Pool:
         print ("%d:%s"%(a,ip))
