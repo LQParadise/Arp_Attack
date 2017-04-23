@@ -16,9 +16,10 @@ def GetNetwork():
 
 def MakeCommand():
     network = GetNetwork()
+    command0 = 'touch 433wifi.txt'
     command1 = network[0]+'/24'
     command2 = 'fping '+'-ag '+command1+' > '+'433wifi.txt '
-    cmd = 'cat '+'433wifi.txt'
+    subprocess.Popen(command0,shell=True)
     p =  subprocess.Popen(command2,shell=True) 
     p.wait()
     Content = Read_File('433wifi.txt')
