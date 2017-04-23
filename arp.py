@@ -36,7 +36,7 @@ def Attack():
     Net_info = GetNetwork()
     Iface = Net_info[1]
     GateWay = Net_info[2]
-    IP_Pool = Read_File("433wifi.txt")
+    IP_Pool = MakeCommand()
     a=0
     for ip in IP_Pool:
         a=a+1
