@@ -39,8 +39,8 @@ def Attack():
     IP_Pool = MakeCommand()
     a=0
     for ip in IP_Pool:
-        a=a+1
         print ("%d:%s"%(a,ip))
+        a+=1
     i = raw_input("Choose ip for attack:")
     i=int(i)
     Attack_IP = IP_Pool[i]
